@@ -31,27 +31,35 @@ Una web para mostrar los proyectos de un estudio de arquitectura, destacando sus
 - **Contacto:** Formulario con nombre, email y mensaje, además de los datos de contacto.  
 
 
+
 ## Sugerencia de colores(Alberto):
 
-- **Opcion1** "Confianza y Sofisticación":
+### Opción 1: "Confianza y Sofisticación"
+![Opción 1](img/1.png)
 Gris Antracita: #343a40
 Blanco Roto: #f8f9fa
 Beige Piedra: #adb5bd
 Acento Ocre / Coñac: #b08968
 
-- **Opcion2** "Creatividad y Vanguardia":
+
+### Opción 2: "Creatividad y Vanguardia"
+![Opción 2](img/2.png)
 Azul Petróleo Profundo: #003f5c
 Blanco Nieve: #ffffff
 Gris Cemento Claro: #ced4da
 Acento Amarillo Eléctrico: #ffa600
 
-- **Opcion3** "Sostenible y Humana":
+
+### Opción 3: "Sostenible y Humana"
+![Opción 3](img/3.png)
 Verde Musgo: #588157
 Crema / Lino: #fdf0d5
 Terracota Suave: #e07a5f
 Gris Pizarra: #495057
 
-- **Opcion4** "Minimalismo Nórdico":
+
+### Opción 4: "Minimalismo Nórdico"
+![Opción 4](img/4.png)
 Blanco Puro: #ffffff
 Gris Perla: #e9ecef
 Madera Clara (Tono representativo): #decab9
