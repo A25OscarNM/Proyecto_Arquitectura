@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARQ Estudio | Arquitectura y Diseño</title>
+    <style>
+        /* --- ESTILOS GLOBALES Y VARIABLES --- */
+        :root {
+            --color-primario: #1a1a1a; /* Negro suave */
+            --color-secundario: #f4f4f4; /* Gris claro */
+            --color-acento: #c5a47e; /* Un tono dorado/ocre elegante */
+            --fuente-titulos: 'Helvetica Neue', Arial, sans-serif;
+            --fuente-cuerpo: 'Georgia', serif;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            margin: 0;
+            background-color: #ffffff;
+            color: var(--color-primario);
+            overflow-x: hidden;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+        }
+        .navbar .logo {
+            font-family: var(--fuente-titulos);
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--color-primario);
+        }
+        .navbar nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: var(--color-primario);
+            font-family: var(--fuente-titulos);
+        }
+
+        /* --- SECCIÓN HERO --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=3600') no-repeat center center/cover;
+        }
+        .hero h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        .hero .cta-button {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid var(--color-acento);
+            color: var(--color-acento);
+            text-decoration: none;
+            font-family: var(--fuente-titulos);
+            transition: all 0.3s ease;
+        }
+        .hero .cta-button:hover {
+            background: var(--color-acento);
+            color: white;
+        }
+
+        /* --- ESTILOS GENERALES DE SECCIÓN --- */
+        .section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section-title {
+            font-family: var(--fuente-titulos);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            font-weight: 300;
+        }
+
+        /* --- SECCIÓN PROYECTOS --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background-color: var(--color-secundario);
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .project-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .project-card-info {
+            padding: 1.5rem;
+        }
+        .project-card-info h3 {
+            font-family: var(--fuente-titulos);
+            margin: 0 0 0.5rem 0;
+        }
+        .project-card-info p {
+            margin: 0;
+            color: #666;
+        }
+
+        /* --- SECCIÓN SOBRE NOSOTROS --- */
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about-content img {
+            max-width: 40%;
+            height: auto;
+        }
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background-color: var(--color-primario);
+            color: var(--color-secundario);
+            text-align: center;
+            padding: 3rem 5%;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section { padding: 4rem 5%; }
+            .about-content { flex-direction: column; }
+            .about-content img { max-width: 100%; }
+            .navbar { padding: 1rem 3%; }
+            .navbar nav { display: none; } /* Simplificado para el ejemplo */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">ARQ ESTUDIO</a>
+        <nav>
+            <a href="#projects">Proyectos</a>
+            <a href="#about">Estudio</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Creamos espacios que inspiran</h1>
+            <a href="#projects" class="cta-button">EXPLORAR PROYECTOS</a>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1800" alt="Villa Mar">
+                    <div class="project-card-info">
+                        <h3>Villa Mar</h3>
+                        <p>Residencial, Costa Brava</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1800" alt="Edificio Nexus">
+                    <div class="project-card-info">
+                        <h3>Edificio Nexus</h3>
+                        <p>Comercial, Madrid</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1800" alt="Casa del Bosque">
+                    <div class="project-card-info">
+                        <h3>Casa del Bosque</h3>
+                        <p>Residencial, Pirineos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+             <h2 class="section-title">Nuestra Filosofía</h2>
+             <div class="about-content">
+                 <div class="about-text">
+                     <p>En <strong>ARQ Estudio</strong>, creemos que la arquitectura es más que construir; es crear entornos que mejoran la vida. Fusionamos la funcionalidad con la estética atemporal, utilizando materiales sostenibles y un diálogo constante con el paisaje. Cada proyecto es una historia única, un compromiso con la innovación y la visión de nuestro cliente.</p>
+                 </div>
+                 <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1800" alt="Equipo de arquitectos trabajando">
+             </div>
+        </section>
+        
+    </main>
+
+    <footer id="contact" class="footer">
+        <h2>Hablemos de tu proyecto</h2>
+        <p>info@arqestudio.com | +34 912 345 678</p>
+        <p>&copy; 2025 ARQ Estudio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // --- SCRIPT PARA ANIMACIÓN AL HACER SCROLL ---
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // La sección se activa cuando un 10% es visible
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
