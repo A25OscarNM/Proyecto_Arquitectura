@@ -64,3 +64,39 @@ Blanco Puro: #ffffff
 Gris Perla: #e9ecef
 Madera Clara (Tono representativo): #decab9
 Negro Mate: #212529
+
+
+
+
+
+## Primera correción del cliente
+
+### Logotipo escogido
+![](img/logo.png)
+Pidio que usaramos más el logotipo que esta muy bien
+
+
+### Cambio en el color principal
+El marron no le pareción buena opción asi que decidio cambiar el color a un azul/verde oscuro, además nos dijo de que probaramos el color que usamos para el logo anterior
+
+
+### Pagina de inicio
+Nada de proyectos pequeños uno grande que tenga 6/7 imagenes rotativas como si fuera una galeria
+
+### Proyectos
+El recuadro de cada proyecto se hace en gris, cambiando el marron por el f4f4f4 que tenemos
+Además mucho texto, que sea algo sencillo y descriptivo
+Fotos más en grande y menos texto para darle importancia a lo visual
+
+
+### Servicio 
+Tiene que ser mas formal, lo ve algo poco profesional y que no es lo que busca
+Además que cuando vas bajando las tarjetas van apareciendo de los lados
+
+### Contacto
+Le gusta el mapa. Divide el texto en parrafos y justificado, nada de centrado
+
+### Instagram
+Hay que crearel un instagram para promocionar la empresa y que este profesional y bien ordenado
+
+
