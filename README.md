@@ -98,5 +98,9 @@ Le gusta el mapa. Divide el texto en parrafos y justificado, nada de centrado
 
 ### Instagram
 Hay que crearel un instagram para promocionar la empresa y que este profesional y bien ordenado
+<img width="1920" height="1080" alt="Edificios2" src="https://github.com/user-attachments/assets/758c282a-0847-4cd2-a3c8-a366d987d530" />
+<img width="1920" height="1080" alt="Edificios" src="https://github.com/user-attachments/assets/433e9b33-00e0-485b-b37c-6d5ebadcc24d" />
+<img width="290" height="311" alt="Edificios4" src="https://github.com/user-attachments/assets/8264f0e2-614a-48ad-8cf9-7748c2957cc0" />
+<img width="290" height="311" alt="Edificios3" src="https://github.com/user-attachments/assets/e8486c23-5d8e-4085-bb2b-a727158b3c8a" />
 
 
