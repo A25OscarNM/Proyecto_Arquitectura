@@ -108,7 +108,7 @@ body {
 .arrow {
     background: transparent;
     border: none;
-    font-size: 128px;
+    font-size: 48px;
     width: 160px;
     height: 160px;
     cursor: pointer;
@@ -158,23 +158,44 @@ body {
 .site-footer {
     background: #000;
     color: var(--white);
-    text-align: center;
+    text-align: left;
     height: 570px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 75px;
+    padding: 60px 5%;
 }
-.site-footer h2 {
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-logo img {
+    width: 505px;
+    height: 467px;
+    display: block;
+    object-fit: contain;
+    margin-left: 17%;
+}
+
+.footer-content {
+    flex: 1 1 auto;
+    margin-left: 3.2%;
+}
+
+.footer-content h2 {
     margin: 0;
     font-size: 72px;
     line-height: 1;
 }
-.site-footer p {
+.footer-content p {
     margin: 0;
     font-size: 40px;
     line-height: 1.15;
 }
+
 
 /* Small adjustments so elements align like the mock */
 main {
