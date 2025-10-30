@@ -19,8 +19,7 @@ body {
     overflow-x: hidden;
 }
 
-
-/*Estilo del nav*/
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -29,7 +28,7 @@ body {
     position: fixed;
     width: calc(100% - 2%);
     height: 50px;
-    top: 1;
+    top: 0;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(40px);
     border-bottom: 1px solid #eee;
@@ -50,12 +49,9 @@ body {
     margin: 0 1rem;
     text-decoration: none;
     color: var(--color-oscuro);
-    font-family: var(--fuente-titulos);
 }
 
-
-/* Estilo inicio */
-
+/* INICIO */
 #inicio {
     height: 100vh;
     width: 100%;
@@ -81,9 +77,7 @@ body {
     background: var(--color-primario);
 }
 
-/*Estilo de los proyectos*/
-
-
+/* SECTIONS */
 .section {
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -94,6 +88,7 @@ body {
     transform: translateY(0);
 }
 
+/* TITULARES */
 .titular {
     background-color: var(--color-grisaceo);
     color: var(--color-secundario);
@@ -107,24 +102,82 @@ body {
     text-align: left;
     display: flex;
     align-items: center;
-    font-family: var(--fuente);
     font-size: 2.5rem;
-    margin-bottom: 4rem;
 }
 
-
-.project-card img {
+/* TARJETAS PROYECTO BASE (texto debajo del slider) */
+.project-card {
+    text-align: left;
     width: 100%;
-    height: 250px;
+}
+
+.project-card-info h3 {
+    margin: 8px 0 5px;
+}
+
+.project-card-info p {
+    margin: 0;
+}
+
+/* ===== SLIDER DE PROYECTOS ===== */
+
+/* Contenedor del slider */
+/* Contenedor del slider */
+.slider {
+    position: relative;
+    width: 70%;
+    height: 80vh;       /* <-- pantalla casi completa */
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Imágenes */
+.slides img {
+    width: 100%;
+    height: 80vh;      /* <-- igual que el slider */
     object-fit: cover;
-    transition: transform 0.4s ease;
+    flex-shrink: 0;
 }
 
 
+/* Contenedor de imágenes */
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
 
-/*Estilo Filosofia*/
+/* Botones */
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 8px 14px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+.slider button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* FILOSOFÍA */
 .filosofiaDiv {
-
     width: 75%;
     margin: auto;
     display: flex;
@@ -143,12 +196,10 @@ body {
     font-size: 26px;
 }
 
-
-/*Estilo del footer*/
+/* FOOTER */
 .footer {
     background-color: var(--color-oscuro);
     color: var(--color-secundario);
     text-align: center;
-    font: var(--fuente);
     padding: 3rem 5%;
 }

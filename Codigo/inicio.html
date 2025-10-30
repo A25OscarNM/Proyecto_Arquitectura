@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArcaStudio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="sliders.js"></script>
 </head>
 
 
@@ -30,8 +31,18 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1800"
-                        alt="Villa Mar">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="../img/casa1.png" alt="Proyecto 1">
+                            <img src="../img/casa2.png" alt="Proyecto 2">
+                            <img src="../img/edificios1.png" alt="Proyecto 3">
+                            <img src="../img/edificios2.png" alt="Proyecto 4">
+                        </div>
+
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+
                     <div class="project-card-info">
                         <h3>Villa Mar</h3>
                         <p>Residencial, Costa Brava</p>
@@ -63,25 +74,5 @@
         <p>&copy; 2025 ARQ Estudio. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        // --- SCRIPT PARA ANIMACIÓN AL HACER SCROLL ---
-        const sections = document.querySelectorAll('.section');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1 // La sección se activa cuando un 10% es visible
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-
 </body>
-
 </html>
