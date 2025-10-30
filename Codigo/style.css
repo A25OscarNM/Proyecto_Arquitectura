@@ -1,0 +1,154 @@
+/*La fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Aqui definimos los colores que usaremos en la web*/
+:root {
+    --color-primario: #000080;
+    --color-secundario: #f4f4f4;
+    --color-grisaceo: #343A40;
+    --color-oscuro: #000000;
+    --fuente: 'Urbanist', Arial;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    margin: 0;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    font: var(--fuente);
+    overflow-x: hidden;
+}
+
+
+/*Estilo del nav*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2%;
+    position: fixed;
+    width: calc(100% - 2%);
+    height: 50px;
+    top: 1;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(40px);
+    border-bottom: 1px solid #eee;
+    z-index: 9999;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--color-oscuro);
+    font-family: var(--fuente-titulos);
+}
+
+
+/* Estilo inicio */
+
+#inicio {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-secundario);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(fondo.jpg) no-repeat center center/cover;
+}
+
+#inicio h1 {
+    font-size: 70px;
+}
+
+#inicio a {
+    color: var(--color-secundario);
+    padding: 10px;
+    border: 2px solid var(--color-primario);
+}
+
+#inicio a:hover {
+    background: var(--color-primario);
+}
+
+/*Estilo de los proyectos*/
+
+
+.section {
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titular {
+    background-color: var(--color-grisaceo);
+    color: var(--color-secundario);
+    height: 100px;
+    padding-left: 10px;
+}
+
+.titular h2 {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-family: var(--fuente);
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+
+
+/*Estilo Filosofia*/
+.filosofiaDiv {
+
+    width: 75%;
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.filosofiaDiv img {
+    max-width: 40%;
+    height: auto;
+    margin: 90px 40px;
+}
+
+.filosofiaDiv div p {
+    color: var(--color-oscuro);
+    font-size: 26px;
+}
+
+
+/*Estilo del footer*/
+.footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-secundario);
+    text-align: center;
+    font: var(--fuente);
+    padding: 3rem 5%;
+}

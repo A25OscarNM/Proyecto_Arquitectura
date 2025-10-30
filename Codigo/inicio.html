@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcaStudio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header class="navbar">
+        <a href="#" class="logo"><img src="logoSinFondoOscuro 1.png" alt="ArcaStudio"></a>
+        <nav>
+            <a href="#projects">Proyectos</a>
+            <a href="#about">Servicios</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="section">
+            <h1>Creamos espacios que inspiran</h1>
+            <a>EXPLORAR PROYECTOS</a>
+        </section>
+        <section id="projects" class="section">
+            <div class="titular">
+                <h2 class="section-title">Proyectos Destacados</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1800"
+                        alt="Villa Mar">
+                    <div class="project-card-info">
+                        <h3>Villa Mar</h3>
+                        <p>Residencial, Costa Brava</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="titular">
+                <h2 class="section-title">Nuestra Filosofía</h2>
+            </div>
+            <div class="filosofiaDiv">
+                <div>
+                    <p>En <strong>ARQ Estudio</strong>, creemos que la arquitectura es más que construir; es crear
+                        entornos que mejoran la vida. Fusionamos la funcionalidad con la estética atemporal, utilizando
+                        materiales sostenibles y un diálogo constante con el paisaje. Cada proyecto es una historia
+                        única, un compromiso con la innovación y la visión de nuestro cliente.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1800"
+                    alt="Equipo de arquitectos trabajando">
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <h2>Hablemos de tu proyecto</h2>
+        <p>info@arqestudio.com | +34 912 345 678</p>
+        <p>&copy; 2025 ARQ Estudio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // --- SCRIPT PARA ANIMACIÓN AL HACER SCROLL ---
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // La sección se activa cuando un 10% es visible
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>
