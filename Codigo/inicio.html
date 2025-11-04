@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <title>ArcaStudio</title>
     <link rel="stylesheet" href="style.css">
     <script src="sliders.js"></script>
@@ -31,23 +33,31 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="slider">
+                    <div class="project-img-container slider">
+
                         <div class="slides">
-                            <img src="../img/casa1.png" alt="Proyecto 1">
-                            <img src="../img/casa2.png" alt="Proyecto 2">
-                            <img src="../img/edificios1.png" alt="Proyecto 3">
-                            <img src="../img/edificios2.png" alt="Proyecto 4">
+                            <img src="../img/casa/exterior2.webp" alt="Villa Mar">
+                            <img src="../img/casa/exterior1.webp" alt="Villa Mar">
+                            <img src="../img/casa/chimenea.webp" alt="Villa Mar">
+                            <img src="../img/casa/cocina.webp" alt="Villa Mar">
+                            <img src="../img/casa/habitacion_principal.webp" alt="Villa Mar">
+                            <img src="../img/casa/baño2.webp" alt="Villa Mar">
+                            <img src="../img/casa/baño1.webp" alt="Villa Mar">
+                            <img src="../img/casa/habitacion_pequeña1.webp" alt="Villa Mar">
                         </div>
 
-                        <button class="prev">&#10094;</button>
-                        <button class="next">&#10095;</button>
-                    </div>
+                        <!-- Flechas -->
+                        <button class="slider-arrow prev">&#10094;</button>
+                        <button class="slider-arrow next">&#10095;</button>
 
-                    <div class="project-card-info">
-                        <h3>Villa Mar</h3>
-                        <p>Residencial, Costa Brava</p>
+                        <!-- Caja de texto en la imagen -->
+                        <div class="project-label">
+                            <h4>Villa Mar</h4>
+                            <p>Residencial, Costa Brava</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -75,4 +85,5 @@
     </footer>
 
 </body>
+
 </html>
