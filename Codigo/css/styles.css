@@ -220,6 +220,44 @@ body {
     line-height: 1.15;
 }
 
+/* Footer social: two separate social items */
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px; /* space between the two social items */
+}
+.social-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* space between icon and label inside each item */
+}
+.social-item img {
+    width: 44px;
+    height: 44px;
+    display: block;
+}
+.social-item span {
+    display: inline-block;
+}
+
+/* Match footer text sizing for social labels */
+.social-item span {
+    font-size: 40px;
+    line-height: 1.15;
+    color: inherit;
+}
+
+@media (max-width: 480px) {
+    .social-item img {
+        width: 36px;
+        height: 36px;
+    }
+    .footer-content p, .social-item span {
+        font-size: 28px;
+    }
+}
+
 
 /* Small adjustments so elements align like the mock */
 main {
