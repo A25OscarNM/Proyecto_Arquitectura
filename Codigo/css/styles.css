@@ -17,47 +17,34 @@ body {
     background: var(--white);
     margin: 0; /* allowed */
 }
-
-.site-header {
-    background: var(--white);
-    border-bottom: 3px solid var(--muted);
-    height: 72px;
+.navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    /* make header fixed at top */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-    /* keep horizontal padding previously provided by margin */
-    padding: 0 2.5%;
-}
-.logo {
-    margin-left: 0;
-}
-.logo img {
-    display: block;
-    height: 44px;
-    width: auto;
-}
-.main-nav {
-    display: flex;
-    gap: 30px; /* increased space between nav items */
     align-items: center;
-}
-.main-nav a {
-    color: var(--dark);
-    text-decoration: none;
-    margin: 0; /* reset any per-link margin */
+    padding: 1rem 2%;
+    position: fixed;
+    width: calc(100%);
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(40px);
+    border-bottom: 1px solid #eee;
+    z-index: 9999;
 }
 
-/* Color destacado para el enlace 'Proyectos' en el header */
-.main-nav a.nav-proyectos {
-    color: var(--accent);
-    font-weight: 700;
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--color-oscuro);
 }
 
 .hero {
