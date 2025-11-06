@@ -76,6 +76,10 @@ body {
     background: var(--color-primario);
 }
 
+#explorar {
+    text-decoration: none;
+}
+
 /* SECTIONS */
 .section {
     transform: translateY(30px);
