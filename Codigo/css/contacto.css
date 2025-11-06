@@ -1,0 +1,153 @@
+.form {
+    padding-top: 3%;
+    background-color: #F8F9FA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 692px;
+}
+
+.contacts {
+    padding-top: 3%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 692px;
+}
+
+#map {
+    flex: 1;
+    border: 2px solid #0a0a72;
+    max-width: 40%;
+    margin-bottom: 40px;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+}
+
+#map-contacts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 31%;
+}
+
+#map-contacts h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+.contacts-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contacts-group img {
+    width: 40px;
+    height: 40px;
+    background-color: #000080;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.contacts-group p:first-child {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.contacts-group p:last-child {
+    font-size: 0.9rem;
+    margin: 2px 0 0;
+}
+
+.separator {
+    width: 70%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 15px 0;
+}
+
+#form-text {
+    max-width: 40%;
+}
+
+#form-form {
+    min-width: 30%;
+}
+
+div#tfAsunto {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #00008B;
+    padding: 30px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    min-height: 90%;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #00008B;
+    padding: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #00008b7c;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00008B;
+}
+
+#telefono,
+#asunto {
+    width: 48%;
+    display: inline-block;
+}
+
+#telefono {
+    margin-right: 4%;
+}
+
+textarea {
+    height: 190px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    background-color: #00008B;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0000CD;
+}
