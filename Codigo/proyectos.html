@@ -7,15 +7,19 @@
   <title>ARQ Estudio - Proyectos</title>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
+
+  <!-- IMPORTA EL JS DESPUÉS DEL CSS -->
+  <script src="js/carrusel.js" defer></script>
+</head>
+
+<body>
   <header class="navbar">
-      <a href="./inicio.html" class="logo"><img src="logoSinFondoOscuro 1.png" alt="ArcaStudio"></a>
-      <nav>
-          <a href="./proyectos.html" class="selected">Proyectos</a>
-          <a href="./servicios.html">Servicios</a>
-          <a href="./contacto.html">Contacto</a>
-      </nav>
+    <a href="./inicio.html" class="logo"><img src="logoSinFondoOscuro 1.png" alt="ArcaStudio"></a>
+    <nav>
+      <a href="./proyectos.html" class="selected">Proyectos</a>
+      <a href="./servicios.html">Servicios</a>
+      <a href="./contacto.html">Contacto</a>
+    </nav>
   </header>
 
   <main>
@@ -23,46 +27,81 @@
       <h1>PROYECTOS</h1>
     </section>
 
-    <section class="section">
-      <h2 class="section-title">Casas</h2>
+    <!-- CASAS -->
+    <section class="section casas-section">
+      <div class="titular">
+        <h2 class="section-title">Casas</h2>
+      </div>
+
       <div class="carousel" data-carousel>
-        <button class="arrow left" data-prev>←</button>
-        <div class="cards" role="list">
+        <button class="slider-arrow prev">&#10094;</button>
+
+        <div class="cards">
           <article class="card">
             <img src="img/casa1.png" alt="Casa de los Alpes">
-            <h3>Casa de los Alpes</h3>
+            <div class="project-label">
+              <h4>Casa de los Alpes</h4>
+              <p>Residencial · Montañas</p>
+            </div>
           </article>
+
           <article class="card">
             <img src="img/casa2.png" alt="Chalet primera linea">
-            <h3>Chalet primera linea</h3>
+            <div class="project-label">
+              <h4>Chalet Primera Línea</h4>
+              <p>Residencial · Costa</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="img/edificios2.png" alt="Casa moderna">
+            <div class="project-label">
+              <h4>Casa Moderna</h4>
+              <p>Arquitectura Contemporánea</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="img/edificios1.png" alt="Villa Mediterránea">
+            <div class="project-label">
+              <h4>Villa Mediterránea</h4>
+              <p>Residencial · Mediterráneo</p>
+            </div>
           </article>
         </div>
-        <button class="arrow right" data-next>→</button>
+
+        <button class="slider-arrow next">&#10095;</button>
       </div>
     </section>
 
+
+    <!-- EDIFICIOS -->
     <section class="section">
       <h2 class="section-title">Edificios</h2>
       <div class="carousel" data-carousel>
         <button class="arrow left" data-prev>←</button>
+
         <div class="cards">
           <article class="card">
             <img src="img/edificios1.png" alt="Edificio Nexus">
-            <h3>Edifico Nexus</h3>
+            <h3>Edificio Nexus</h3>
           </article>
           <article class="card">
             <img src="img/edificios2.png" alt="Edificio Dubai">
             <h3>Edificio Moderno Dubai</h3>
           </article>
         </div>
+
         <button class="arrow right" data-next>→</button>
       </div>
     </section>
 
+    <!-- INTERIORES -->
     <section class="section">
       <h2 class="section-title">Interiores</h2>
       <div class="carousel" data-carousel>
         <button class="arrow left" data-prev>←</button>
+
         <div class="cards">
           <article class="card">
             <img src="img/interiores1.png" alt="Sala diseño">
@@ -73,35 +112,35 @@
             <h3>Sala arquitectura</h3>
           </article>
         </div>
+
         <button class="arrow right" data-next>→</button>
       </div>
     </section>
   </main>
 
+
+  <!-- FOOTER -->
   <footer id="contact" class="footer">
-      <div class="footer-inner">
-          <div class="footer-logo">
-              <img src="img/logoFooter.png" alt="ARQ Estudio logo">
-          </div>
-          <div class="footer-content">
-              <h2>Hablemos de tu proyecto</h2>
-              <p>info@arqestudio.com | +34 912 345 678</p>
-              <div class="footer-social">
-                  <div class="social-item">
-                      <img src="img/Instagram.png" alt="Instagram">
-                      <span>instagram</span>
-                  </div>
-                  <div class="social-item">
-                      <img src="img/Twitter.png" alt="Twitter">
-                      <span>twitter</span>
-                  </div>
-              </div>
-              <p>© 2025 ARQ Estudio. Todos los derechos reservados.</p>
-          </div>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="img/logoFooter.png" alt="ARQ Estudio logo">
       </div>
+      <div class="footer-content">
+        <h2>Hablemos de tu proyecto</h2>
+        <p>info@arqestudio.com | +34 912 345 678</p>
+        <div class="footer-social">
+          <div class="social-item">
+            <img src="img/Instagram.png" alt="Instagram">
+            <span>instagram</span>
+          </div>
+          <div class="social-item">
+            <img src="img/Twitter.png" alt="Twitter">
+            <span>twitter</span>
+          </div>
+        </div>
+        <p>© 2025 ARQ Estudio. Todos los derechos reservados.</p>
+      </div>
+    </div>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
-
 </html>

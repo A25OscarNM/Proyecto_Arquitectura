@@ -406,3 +406,79 @@ main {
 .service-card {
     transition-delay: 0ms;
 }
+
+/* SLIDER CASAS */
+.casas-section .carousel {
+  width: 90%;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.casas-section .cards {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+
+.casas-section .card {
+  min-width: 50%;
+  flex-shrink: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.casas-section .card img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Texto dentro de la foto */
+.casas-section .project-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.casas-section .project-label h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+.casas-section .project-label p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Flechas */
+.casas-section .slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 14px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 6px;
+}
+
+.casas-section .prev { left: 10px; }
+.casas-section .next { right: 10px; }
+
+.casas-section .slider-arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
