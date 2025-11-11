@@ -28,3 +28,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const carousels = document.querySelectorAll("[data-carousel]");
+
+    carousels.forEach(carousel => {
+        const cards = carousel.querySelector(".cards");
+        const slides = carousel.querySelectorAll(".card");
+        const prev = carousel.querySelector(".prev");
+        const next = carousel.querySelector(".next");
+
+        let index = 0; // primera imagen visible
+        const visibleCount = 2; // mostramos 2 imágenes
+
+        function update() {
+            // Mover una sola imagen (50% del contenedor visible)
+            cards.style.transform = `translateX(-${index * (100 / visibleCount)}%)`;
+        }
+
+        next.addEventListener("click", () => {
+            if (index < slides.length - visibleCount) {
+                index++;
+            } else {
+                index = 0; // volver al inicio
+            }
+            update();
+        });
+
+        prev.addEventListener("click", () => {
+            if (index > 0) {
+                index--;
+            } else {
+                index = slides.length - visibleCount; // ir al final
+            }
+            update();
+        });
+
+        update();
+    });
+});
