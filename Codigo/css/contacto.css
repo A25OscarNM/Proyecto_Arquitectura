@@ -125,7 +125,7 @@ textarea:focus {
 
 #telefono,
 #asunto {
-    width: 48%;
+    width: 98%;
     display: inline-block;
 }
 
@@ -151,3 +151,24 @@ button {
 button:hover {
     background-color: #0000CD;
 }
+
+ #tfAsunto {
+      display: flex;
+      gap: 10px;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      display: none;
+    }
+
+    #mensaje-final {
+      text-align: center;
+      font-weight: bold;
+      color: green;
+      margin-top: 20px;
+      display: none;
+    }

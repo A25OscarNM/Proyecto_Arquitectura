@@ -9,6 +9,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/contacto.css">
+    <script defer src="js/contacto.js"></script>
 </head>
 
 <body>
@@ -37,16 +38,37 @@
             </div>
 
             <div id="form-form">
-                <form action="">
-                    <input type="text" name="nombre" placeholder="Nombre">
-                    <input type="email" name="email" placeholder="Email">
-                    <div id="tfAsunto">
-                        <input type="text" id="telefono" name="telefono" placeholder="Número de teléfono">
-                        <input type="text" id="asunto" name="asunto" placeholder="Asunto">
+                <form id="formContacto" method="POST" novalidate>
+                    <div class="field-group">
+                        <input type="text" name="nombre" placeholder="Nombre">
+                        <div class="error" id="error-nombre"></div>
                     </div>
-                    <textarea name="mensaje" placeholder="Mensaje"></textarea>
+
+                    <div class="field-group">
+                        <input type="email" name="email" placeholder="Email">
+                        <div class="error" id="error-email"></div>
+                    </div>
+
+                    <div id="tfAsunto" class="field-group">
+                        <div>
+                            <input type="text" name="telefono" id="telefono" placeholder="Número de teléfono">
+                            <div class="error" id="error-telefono"></div>
+                        </div>
+                        <div>
+                            <input type="text" name="asunto" id="asunto" placeholder="Asunto">
+                            <div class="error" id="error-asunto"></div>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <textarea name="mensaje" placeholder="Mensaje"></textarea>
+                        <div class="error" id="error-mensaje"></div>
+                    </div>
+
                     <button type="submit">ENVIAR</button>
                 </form>
+
+                <div id="mensaje-final">✅ Mensaje enviado</div>
             </div>
         </section>
 
