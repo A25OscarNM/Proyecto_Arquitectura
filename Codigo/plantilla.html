@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARQ Estudio - Proyecto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/paginaProyectos.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="./inicio.html" class="logo"><img src="logoSinFondoOscuro 1.png" alt="ArcaStudio"></a>
+        <nav>
+            <a href="./proyectos.html">Proyectos</a>
+            <a href="./servicios.html">Servicios</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <!-- Imagen principal: se rellenará por JS -->
+            <img id="project-hero-img" src="img/casa1.png" alt="Proyecto">
+        </section>
+
+        <section class="project-content">
+            <div class="project-left">
+                <h2 id="project-title" class="big-title">Proyecto</h2>
+                <p id="project-location" class="location"><strong>Ubicación:</strong> Indefinida</p>
+            </div>
+
+            <div class="project-right">
+                <p id="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p id="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p id="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="img/logoFooter.png" alt="ARQ Estudio logo">
+            </div>
+            <div class="footer-content">
+                <h2>Hablemos de tu proyecto</h2>
+                <p>info@arqestudio.com | +34 912 345 678</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/arko_studios/" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="social-item">
+                            <img src="img/Instagram.png" alt="Instagram">
+                            <span>instagram</span>
+                        </div>
+                    </a>
+                    <div class="social-item">
+                        <img src="img/Twitter.png" alt="Twitter">
+                        <span>twitter</span>
+                    </div>
+                </div>
+                <p>© 2025 ARQ Estudio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Rellenar la plantilla con datos pasados por sessionStorage o por query params
+        (function () {
+            function slugify(text) {
+                return text.toString().toLowerCase().trim()
+                    .replace(/\s+/g, '-')
+                    .replace(/[^a-z0-9\-]/g, '')
+                    .replace(/\-+/g, '-');
+            }
+
+            function getQueryParams() {
+                const params = {};
+                location.search.substr(1).split('&').forEach(function (pair) {
+                    if (!pair) return;
+                    const parts = pair.split('=');
+                    params[decodeURIComponent(parts[0])] = decodeURIComponent((parts[1] || '').replace(/\+/g, ' '));
+                });
+                return params;
+            }
+
+            // Try sessionStorage first
+            let data = null;
+            try {
+                const raw = sessionStorage.getItem('projectData');
+                if (raw) data = JSON.parse(raw);
+            } catch (e) { }
+
+            // If not in sessionStorage, try query params
+            if (!data) {
+                const q = getQueryParams();
+                if (q.title || q.image || q.location || q.desc) {
+                    data = {
+                        title: q.title || 'Proyecto',
+                        image: q.image || 'img/casa1.png',
+                        location: q.location || 'Indefinida',
+                    };
+                }
+            }
+
+            // Fallback default
+            if (!data) {
+                data = {
+                    title: 'Proyecto Indefinido',
+                    image: 'img/casa1.png',
+                    location: 'Indefinida',
+                };
+            }
+
+            // Populate DOM
+            document.getElementById('project-hero-img').src = data.image;
+            document.getElementById('project-hero-img').alt = data.title;
+            document.getElementById('project-title').textContent = data.title;
+            document.getElementById('project-location').innerHTML = '<strong>Ubicación:</strong> ' + data.location;
+
+            // Clean sessionStorage so reloads by accident do not keep stale data
+            try { sessionStorage.removeItem('projectData'); } catch (e) { }
+
+            // Change displayed URL to hide plantilla.html: /proyecto/<slug>
+            try {
+                const slug = slugify(data.title || 'proyecto');
+                const newPath = '/proyecto/' + slug;
+                history.replaceState(null, '', newPath);
+            } catch (e) { }
+        })();
+    </script>
+</body>
+
+</html>
