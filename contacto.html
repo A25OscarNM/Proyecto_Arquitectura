@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARQ Estudio - Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/contacto.css">
+    <script defer src="assets/js/contacto.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="assets/img/logoSinFondoOscuro 1.png" alt="ArcaStudio"></a>
+        <nav>
+            <a href="./proyectos.html">Proyectos</a>
+            <a href="./servicios.html">Servicios</a>
+            <a href="./contacto.html" class="selected">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" style="background-image: url(assets/img/img-contacto.jpg);">
+            <h1>CONTACTO</h1>
+        </section>
+
+        <section class="form">
+            <div id="form-text">
+                <h1>Contacta con nosotros.</h1>
+                <p>Estamos disponibles para conversar sobre tus proyectos e ideas. Completa el formulario o escríbenos
+                    directamente: </p>
+                <p>estaremos encantados de asesorarte y encontrar juntos la mejor solución arquitectónica.
+                    ¿Quieres que el tono sea más corporativo, minimalista o cercano (por ejemplo, para un estudio
+                    pequeño o
+                    boutique)? Puedo ajustarlo.</p>
+            </div>
+
+            <div id="form-form">
+                <form id="formContacto" method="POST" novalidate>
+                    <div class="field-group">
+                        <input type="text" name="nombre" placeholder="Nombre">
+                        <div class="error" id="error-nombre"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <input type="email" name="email" placeholder="Email">
+                        <div class="error" id="error-email"></div>
+                    </div>
+
+                    <div id="tfAsunto" class="field-group">
+                        <div>
+                            <input type="text" name="telefono" id="telefono" placeholder="Número de teléfono">
+                            <div class="error" id="error-telefono"></div>
+                        </div>
+                        <div>
+                            <input type="text" name="asunto" id="asunto" placeholder="Asunto">
+                            <div class="error" id="error-asunto"></div>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <textarea name="mensaje" placeholder="Mensaje"></textarea>
+                        <div class="error" id="error-mensaje"></div>
+                    </div>
+
+                    <button type="submit">ENVIAR</button>
+                </form>
+
+                <div id="mensaje-final">✅ Mensaje enviado</div>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.141146049439!2d-8.630431523417636!3d42.424730431012605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f7101ff92e60b%3A0xc0646cd676c9e28!2sEstudio%20Arquitectura!5e0!3m2!1ses!2ses!4v1762431524638!5m2!1ses!2ses"></iframe>
+
+            </div>
+            <div id="map-contacts">
+                <h1>ESTAMOS ENCANTADOS DE ATENDERTE</h1>
+                <div class="contacts-group"><img src="assets/img/MAP.png">
+                    <div>
+                        <p>DIRECCION</p>
+                        <p>Rúa da Abundancia, 36004 Pontevedra</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="contacts-group"><img src="assets/img/MAIL.png">
+                    <div>
+                        <p>EMAIL</p>
+                        <p>info@arqestudio.com</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="contacts-group"><img src="assets/img/PHONE.png">
+                    <div>
+                        <p>TELÉFONO</p>
+                        <p>+34 912 345 678</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contact" class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="assets/img/logoFooter.png" alt="ARQ Estudio logo">
+            </div>
+            <div class="footer-content">
+                <h2>Hablemos de tu proyecto</h2>
+                <p>info@arqestudio.com | +34 912 345 678</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/arko_studios/" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="social-item">
+                            <img src="assets/img/Instagram.png" alt="Instagram">
+                            <span>instagram</span>
+                        </div>
+                    </a>
+                    <div class="social-item">
+                        <img src="assets/img/Twitter.png" alt="Twitter">
+                        <span>twitter</span>
+                    </div>
+                </div>
+                <p>© 2025 ARQ Estudio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
