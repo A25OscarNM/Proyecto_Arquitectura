@@ -2,6 +2,12 @@
 
 Este documento reúne las ideas y aportaciones del equipo sobre el proyecto de la primera evaluación.
 
+
+## Como probar la web (Si Luis esta es tu parte)
+La pagina web del proyecto es /Codigo/inicio.html, a partir de ahi ya puedes entrar a todo, lo digo
+porque la organización no es nuestro fuerte y te puedes perder
+
+
 ## 🌐 Referencia del profesor
 Ejemplo de página web:  
 [https://josemanuelmaestrofuentes.com/experiencia/](https://josemanuelmaestrofuentes.com/experiencia/)
